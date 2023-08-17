@@ -32,7 +32,7 @@ int year2022::day01::part1() {
     for(const auto & i : puzzleVector)
     {
         if(i.empty()){
-            currentMax = std::fmax(currentMax, calorieSum);
+            currentMax = std::max(currentMax, calorieSum);
             calorieSum = 0;
             continue;
         }
