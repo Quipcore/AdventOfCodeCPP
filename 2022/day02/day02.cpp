@@ -3,3 +3,11 @@
 //
 
 #include "day02.h"
+
+int year2022::day02::part1() {
+    return 0;
+}
+
+int year2022::day02::part2() {
+    return 0;
+}
