@@ -3,6 +3,7 @@
 //
 
 #include "day02.h"
+#include "../../utils.h"
 
 int year2022::day02::part1() {
     return 0;

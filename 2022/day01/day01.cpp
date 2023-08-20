@@ -3,29 +3,12 @@
 //
 
 #include "day01.h"
+#include "../../utils.h"
 
-const std::string puzzle_path = "../2022/day01/puzzledata.txt";
-
-std::vector<std::string> year2022::day01::createPuzzleVector(std::fstream &file){
-    std::vector<std::string> puzzleVector;
-
-    if(file.is_open())
-    {
-        std::string line;
-        while(std::getline(file, line))
-        {
-            puzzleVector.push_back(line);
-        }
-    }
-
-    return puzzleVector;
-}
+const std::string puzzlePath = "../2022/day01/puzzledata.txt";
 
 int year2022::day01::part1() {
-    std::fstream file;
-    file.open(puzzle_path, std::ios::in);
-    std::vector<std::string> puzzleVector = createPuzzleVector(file);
-    file.close();
+    std::vector<std::string> puzzleVector = utils::createPuzzleVector(puzzlePath);
 
     int currentMax = -1;
     int calorieSum = 0;
@@ -43,10 +26,7 @@ int year2022::day01::part1() {
 }
 
 int year2022::day01::part2() {
-    std::fstream file;
-    file.open(puzzle_path, std::ios::in);
-    std::vector<std::string> puzzleVector = createPuzzleVector(file);
-    file.close();
+    std::vector<std::string> puzzleVector = utils::createPuzzleVector(puzzlePath);
 
     std::vector<int> calories;
     int calorieSum = 0;
@@ -63,7 +43,7 @@ int year2022::day01::part2() {
     }
 
     std::sort(calories.begin(), calories.end());
-    long calorieEnd = calories.size();
+    int calorieEnd = calories.size();
     int sum = 0;
     for(int i = calorieEnd-1; i > calorieEnd-4; --i){
         sum += calories[i];

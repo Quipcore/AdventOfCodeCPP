@@ -5,12 +5,6 @@
 #ifndef ADVENTOFCODECPP_DAY01_H
 #define ADVENTOFCODECPP_DAY01_H
 
-#include <vector>
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-#include <cmath>
 #include "../../IDay.h"
 
 namespace year2022{
@@ -18,7 +12,6 @@ namespace year2022{
     private:
         int part1() override;
         int part2() override;
-        std::vector<std::string> createPuzzleVector(std::fstream& file);
     };
 }
 

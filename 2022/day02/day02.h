@@ -6,7 +6,6 @@
 #define ADVENTOFCODECPP_DAY02_H
 
 #include "../../IDay.h"
-#include "iostream"
 
 namespace year2022{
     class day02 : public IDay{

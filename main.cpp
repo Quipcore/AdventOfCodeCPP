@@ -1,6 +1,7 @@
 #include <iostream>
 #include "2022/day01/day01.h"
 #include "2022/day02/day02.h"
+#include <vector>
 
 std::vector<IDay *> getDays(){
     std::vector<IDay*> vector;
