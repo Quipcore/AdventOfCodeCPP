@@ -3,6 +3,7 @@
 #include "2022/day02/day02.h"
 #include <vector>
 
+
 std::vector<IDay *> getDays(){
     std::vector<IDay*> vector;
 

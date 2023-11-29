@@ -2,6 +2,7 @@
 // Created by felix on 2023-08-17.
 //
 
+#include <algorithm>
 #include "day01.h"
 #include "../../utils.h"
 
@@ -30,16 +31,15 @@ int year2022::day01::part2() {
 
     std::vector<int> calories;
     int calorieSum = 0;
-    for(const auto & i : puzzleVector)
+    for(const auto & str : puzzleVector)
     {
-        if(i.empty()){
+        if(str.empty()){
             calories.push_back(calorieSum);
             calorieSum = 0;
             continue;
         }
 
-        calorieSum += std::stol (i);
-
+        calorieSum += std::stol(str);
     }
 
     std::sort(calories.begin(), calories.end());

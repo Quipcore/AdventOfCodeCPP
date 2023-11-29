@@ -10,8 +10,10 @@
 namespace year2022{
     class day01 : public IDay{
     private:
-        int part1() override;
         int part2() override;
+
+    public:
+        int part1() override;
     };
 }
 
