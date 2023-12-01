@@ -16,9 +16,13 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 set(PUZZLE_CLASSES
+        utils.cpp
+
         2022/day01/day01.cpp
         2022/day02/day02.cpp
-        utils.cpp)
+
+        2023/day01/day01.cpp
+)
 
 add_executable(
         AdventOfCodeCpp
@@ -30,6 +34,7 @@ add_executable(
         AdventOfCodeCppTest
         ${PUZZLE_CLASSES}
         2022/day01/day01_test.cpp
+        2023/day01/day01_test.cpp
 )
 
 target_link_libraries(

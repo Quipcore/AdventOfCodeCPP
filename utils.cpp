@@ -13,8 +13,19 @@ std::vector<std::string> utils::createPuzzleVector(const std::string& path) {
 
     if(file.is_open()){
         std::string line;
+
+        bool skipNextLine = false;
         while(std::getline(file,line)){
-            puzzleVector.push_back(line);
+            if(line == "*/"){
+                skipNextLine = false;
+                continue;
+            }
+            if(line == "/*"){
+                skipNextLine = true;
+            }
+            if(!skipNextLine) {
+                puzzleVector.push_back(line);
+            }
         }
     }
 
