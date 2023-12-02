@@ -22,6 +22,7 @@ set(PUZZLE_CLASSES
         2022/day02/day02.cpp
 
         2023/day01/day01.cpp
+        2023/day02/Day02.cpp
 )
 
 add_executable(
@@ -35,6 +36,7 @@ add_executable(
         ${PUZZLE_CLASSES}
         2022/day01/day01_test.cpp
         2023/day01/day01_test.cpp
+        2023/day02/Day02_test.cpp
 )
 
 target_link_libraries(
