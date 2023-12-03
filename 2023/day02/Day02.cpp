@@ -17,11 +17,11 @@ int year2023::Day02::part1() {
 
     const int REDS = 12, GREENS = 13, BLUES = 14;
     int sum = 0;
-    std::vector<std::string> puzzleVector = utils::createPuzzleVector(puzzlePath);
-    for(int id = 0; id < puzzleVector.size(); id++){
+    std::vector<std::string>* puzzleVector = utils::createPuzzleVector(puzzlePath);
+    for(int id = 0; id < puzzleVector->size(); id++){
         int red = 0, green = 0, blue = 0;
 
-        std::string line = puzzleVector[id].substr(puzzleVector[id].find(':')+2);
+        std::string line = puzzleVector->at(id).substr(puzzleVector->at(id).find(':')+2);
         std::vector<std::string> sets = split(line, std::string(";"));
 
         for(std::string pair : sets){
@@ -55,11 +55,11 @@ int year2023::Day02::part1() {
 int year2023::Day02::part2() {
     const int REDS = 12, GREENS = 13, BLUES = 14;
     int sum = 0;
-    std::vector<std::string> puzzleVector = utils::createPuzzleVector(puzzlePath);
-    for(int id = 0; id < puzzleVector.size(); id++){
+    std::vector<std::string>* puzzleVector = utils::createPuzzleVector(puzzlePath);
+    for(int id = 0; id < puzzleVector->size(); id++){
         int red = 0, green = 0, blue = 0;
 
-        std::string line = puzzleVector[id].substr(puzzleVector[id].find(':')+2);
+        std::string line = puzzleVector->at(id).substr(puzzleVector->at(id).find(':')+2);
         std::vector<std::string> sets = split(line, std::string(";"));
 
         for(std::string pair : sets){

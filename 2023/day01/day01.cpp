@@ -11,9 +11,9 @@
 
 int year2023::day01::part1() {
 
-    std::vector<std::string> puzzleVector = utils::createPuzzleVector(puzzlePath);
+    std::vector<std::string>* puzzleVector = utils::createPuzzleVector(puzzlePath);
     std::vector<int> numbers;
-    for(auto &str : puzzleVector){
+    for(auto &str : *puzzleVector){
         bool firstNumberFound = false;
         int firstNumber = -1;
         int secondNumber = -1;
@@ -44,7 +44,7 @@ int year2023::day01::part1() {
 }
 
 int year2023::day01::part2() {
-    std::vector<std::string> puzzleVector = utils::createPuzzleVector(puzzlePath);
+    std::vector<std::string>* puzzleVector = utils::createPuzzleVector(puzzlePath);
 
     std::vector<int> numbers;
 
@@ -58,7 +58,7 @@ int year2023::day01::part2() {
                                       {"eight",8},
                                       {"nine",9}};
 
-    for(const auto &item : puzzleVector){
+    for(const auto &item : *puzzleVector){
         bool firstNumberFound = false;
         int first = -1,second = -1;
         for(int i = 0; i < item.size(); i++){

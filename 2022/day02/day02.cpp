@@ -12,9 +12,9 @@ std::map<char, int> playToPoint = {{'X',1},{'Y',2},{'Z',3}};
 
 int year2022::day02::part1() {
     int sum = 0;
-    std::vector<std::string> puzzleVector = utils::createPuzzleVector(puzzlePath);
+    std::vector<std::string>* puzzleVector = utils::createPuzzleVector(puzzlePath);
 
-    for(auto &item : puzzleVector){
+    for(auto &item : *puzzleVector){
 
     }
 

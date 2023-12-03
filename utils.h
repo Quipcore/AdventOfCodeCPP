@@ -11,7 +11,11 @@
 
 class utils {
 public:
-    static std::vector<std::string> createPuzzleVector(const std::string& path);
+    static std::vector<std::string>* createPuzzleVector(const std::string& path);
+
+    static std::vector<std::string> split(std::string s, std::string delimiter);
+
+    static void trim(std::string *str);
 };
 
 
